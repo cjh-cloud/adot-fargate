@@ -1,0 +1,18 @@
+---
+# configure the service and the collector as a StatefulSet
+apiVersion: v1
+kind: Service
+metadata:
+  name: adot-collector-service
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: aws-adot
+    component: adot-collector
+spec:
+  ports:
+    - name: metrics # default endpoint for querying metrics.
+      port: 8888
+  selector:
+    component: adot-collector
+  type: ClusterIP
+---

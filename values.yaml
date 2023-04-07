@@ -1,0 +1,18 @@
+namespace: "fargate-container-insights"
+
+# The name of the Kubernetes cluster. A non-empty value is required
+clusterName: 
+
+# The AWS region for the kubernetes cluster.
+region: 
+
+# Docker image for the adot collector
+image: 
+  repository: "amazon/aws-otel-collector"
+  tag: "v0.27.1"
+
+serviceAccount:
+  create: true
+
+  # AWS IAM role to attach to Service Account
+  iamRoleArn: 

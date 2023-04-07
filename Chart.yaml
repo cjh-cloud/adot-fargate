@@ -1,0 +1,6 @@
+apiVersion: v2
+name: adot-fargate
+description: A Helm chart for AWS Distro for Open Telemetry on Fargate
+type: application
+version: 1.0.0
+appVersion: "v0.27.1"
